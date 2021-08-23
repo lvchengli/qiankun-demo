@@ -1,0 +1,1 @@
+import{o as a,c as e,a as t,b as r}from"./app.4e1c8516.js";const d='{"title":"微前端","description":"","frontmatter":{},"relativePath":"index.md","lastUpdated":1629338870142}',i={},n=[t("h1",{id:"微前端"},[t("a",{class:"header-anchor",href:"#微前端","aria-hidden":"true"},"#"),r(" 微前端")],-1)];i.render=function(t,r,d,i,s,o){return a(),e("div",null,n)};export{d as __pageData,i as default};
