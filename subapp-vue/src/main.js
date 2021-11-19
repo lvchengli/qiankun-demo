@@ -15,12 +15,21 @@ let router = null
 // 子应用挂载到自己的html中，基座会拿到挂载后的html，将其插入规定的容器中
 function render(props = {}) {
   const { container } = props
-
+  const base = window.__POWERED_BY_QIANKUN__ ? '/vue' : ''
   router = new VueRouter({
-    base: window.__POWERED_BY_QIANKUN__ ? '/vue' : '/',
+    base,
     mode: 'history',
     routes,
   });
+
+  router.afterEach((to, from, next) => {
+    const state = {
+      ...history.state,
+      current: base + to.fullPath
+    }
+    history.replaceState(state, '', window.location.href)
+  })
+
   instance = new Vue({
     router,
     render: h => h(App)
