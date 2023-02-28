@@ -15,6 +15,9 @@
       <el-menu-item index="/vue">
         vue-app
       </el-menu-item>
+      <el-menu-item index="/vue/about">
+        vue-app-about
+      </el-menu-item>
       <el-menu-item index="/react">
         react-app
       </el-menu-item>

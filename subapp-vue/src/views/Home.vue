@@ -2,6 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Vue2项目"/>
+    <h1 @click="jumpToAbout">jump to about</h1>
   </div>
 </template>
 
@@ -13,6 +14,11 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  methods: {
+    jumpToAbout() {
+      this.$router.push('/about')
+    }
   }
 }
 </script>
