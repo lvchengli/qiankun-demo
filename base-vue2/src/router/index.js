@@ -17,5 +17,21 @@ const router = new VueRouter({
   mode: 'history',
   routes,
 });
+// 目前一种尝试的解决方案
+function getPathStr(str) {
+  if (str.startsWith('/vue3')) {
+    return str.replace('/vue3', '')
+  } 
+  return str
+}
+
+router.afterEach((to, from, next) => {
+  console.log(to.fullPath, 'router.afterEach')
+  const state = {
+    ...history.state,
+    current: getPathStr(to.fullPath)
+  }
+  history.replaceState(state, '', window.location.href)
+})
 
 export default router
