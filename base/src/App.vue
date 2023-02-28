@@ -18,6 +18,12 @@
       <el-menu-item index="/vue/about">
         vue-app-about
       </el-menu-item>
+      <el-menu-item index="/vue3">
+        vue3-app
+      </el-menu-item>
+      <el-menu-item index="/vue3/about">
+        vue3-app-about
+      </el-menu-item>
       <el-menu-item index="/react">
         react-app
       </el-menu-item>
@@ -27,6 +33,7 @@
   </div>
   <router-view/>
   <div id="vue"></div>
+  <div id="vue3"></div>
   <div id="react"></div>
 </template>
 

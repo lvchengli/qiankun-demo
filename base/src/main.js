@@ -17,7 +17,13 @@ const apps = [
     entry: '//localhost:10012', // 通过fetch加载html，js并且动态执行，所以子应用必须支持跨域
     container: '#react', // 容器
     activeRule: '/react' // 激活条件
-  }
+  },
+  {
+    name: 'subapp-vue3',
+    entry: '//localhost:10013', // 通过fetch加载html，js并且动态执行，所以子应用必须支持跨域
+    container: '#vue3', // 容器
+    activeRule: '/vue3' // 激活条件
+  },
 ]
 
 const lifeCycles = {
