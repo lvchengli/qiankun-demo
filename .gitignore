@@ -8,6 +8,7 @@
 /subappReact/node_modules
 /subappVue/node_modules
 /base/node_modules
+/docs/node_modules
 
 # testing
 /coverage

@@ -33,3 +33,13 @@ router.afterEach((to, from, next) => {
 })
 
 ```
+
+# 部署到 github pages
+
+1. 主应用打包至 docs 目录下
+2. 子应用打包至 docs 对应的目录下，例如 /vue3 目录
+3. 遍历主应用、子应用的路由，创建对应的目录和添加对应的 index.html 文件，来模拟 spa 的效果（TODO）
+
+# 部署前检查代码是否可用
+
+通过 http 和 http-proxy-middleware 创建一个静态资源服务器并且设置请求转发能力，让本地 `/qiankun-demo` 请求映射在 `docs` 目录下，验证页面是否能够正常访问
